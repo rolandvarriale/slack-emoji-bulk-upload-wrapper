@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-222fd515722e0ac42d5","applicationID":"1031811685","transactionName":"cFwLR0IMCFVTEB8URVxZAFBETA1XUgdI","queueTime":5,"applicationTime":50,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-222fd515722e0ac42d5",applicationID:"1031811685"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6242674-23"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-6242674-23', { 'optimize_id': 'GTM-T48MRN9'});
+    </script>
+
+    <title>Emojipacks</title>
+<meta name="description" content="CLI to bulk upload emojis to your Slack">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://awesomeopensource.com/project/lambtron/emojipacks">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+      /* Ads styles */
+
+      .ad_fieldset {
+          border-radius: 5px;
+          border: 1px solid #ebedec;
+          color: black;
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+
+      .project_page_ad a:hover {
+          text-decoration: none;
+      }
+
+      .sponsor_text {
+          color: #bdbdbd;
+      }
+
+      .ad_link_container {
+          color: #bdbdbd;
+          text-decoration: none;
+      }
+
+      .ad_link_container:hover {
+          text-decoration: none;
+      }
+
+      .ad_hover_link:hover {
+        text-decoration: underline;
+      }
+
+      .ad_fieldset_project_page {
+        display: flex;
+        align-items: center;
+      }
+
+      .ad_fieldset_projects_page {
+        margin-bottom: 7px;
+      }
+
+      .project_page_ad_container_div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .project_page_ad {
+        margin: 0;
+        padding-top: 7px;
+        padding-bottom: 0;
+        font-weight: 300;
+        margin-bottom: 0px;
+        margin-left: -15px;
+        max-width: fit-content;
+        /*min-height: 146px;*/
+        /* actual height is 146, but to prevent cls for emoji rendering, add 10px */
+        min-height: 156px;
+      }
+
+      .project_page_ad:hover {
+          text-decoration: none;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .project_page_ad {
+            display: none;
+        }
+      }
+
+      .project_page_ad_left_column {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .project_page_ad_center_column {
+        width: 5%;
+      }
+
+      .project_page_ad_right_column {
+        width: 100%;
+      }
+
+      .project_page_ad_image {
+      }
+
+      .aos_project_metadata_header_project_page_ad {
+        color: #808080 !important;
+        font-weight: 500 !important;
+        margin-top: 0px !important;
+      }
+
+      .projects_ad_title_row {
+        text-decoration: none;
+      }
+
+      .projects_ad_title_row:hover {
+          text-decoration: none;
+      }
+
+      .aos_project_metadata_header_project_page_ad a {
+        color: #808080 !important;
+        font-weight: 500 !important;
+      }
+
+      .aos_project_metadata_header_project_page_ad_call_to_action {
+        color: #808080 !important;
+        font-weight: 500 !important;
+      }
+
+      .projects_page_ad_container {
+      }
+
+      @media screen and (max-width: 1023px) {
+        .projects_list_ad_slot_native {
+          display: none !important;
+        }
+      }
+
+      .projects_page_ad_left_column {
+        min-width: 100%;
+      }
+
+      .projects_page_ad_center_column {
+        width: 5%;
+      }
+
+      .projects_page_ad_right_column {
+        width: 30%;
+        min-width: 250px;
+        min-height: 100px;
+      }
+
+      .projects_page_ad_image {
+        min-width: 250px;
+        min-height: 100px;
+      }
+
+      /* carbon ads */
+
+      #carbonads {
+        display: block;
+        overflow: hidden;
+        padding: 1em;
+        max-width: 130px;
+        background: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        line-height: 1.5;
+      }
+
+      #carbonads a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      #carbonads a:hover {
+        color: inherit;
+      }
+
+      #carbonads span {
+        display: block;
+        overflow: hidden;
+      }
+
+      .carbon-img {
+        display: block;
+        margin: 0 auto 8px;
+        line-height: 1;
+      }
+
+      .carbon-text {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .carbon-poweredby {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      /* Ads styles end */
+
+
+
+      /* copy template below */
+      /* ------------------- */
+      /* ----------------- */
+      /* ----------------- */
+
+      /*ipad and below */
+
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+
+      }
+
+      /* end template copy */
+      /* ----------------- */
+      /* ----------------- */
+      /* ----------------- */
+
+      /*ipad and below */
+      .show_on_phones {
+        display: block;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .show_on_phones {
+          display: none;
+        }
+      }
+
+      .twenty_px_padding_top {
+        padding-top: 20px;
+      }
+
+      /*ipad and below */
+      .projects_category_explorer_left_column {
+        max-width: 0;
+        margin-right: 0;
+        display: none;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .projects_category_explorer_left_column {
+          min-width: 20%;
+          margin-right: 5%;
+          display: block;
+        }
+      }
+
+      /*ipad and below */
+      .projects_list_right_column {
+        min-width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .projects_list_right_column {
+          min-width: 75%;
+        }
+      }
+
+      .display_flex {
+        display: flex;
+      }
+
+      .margin_bottom_15 {
+        margin-bottom: 15px;
+      }
+
+      /*ipad and below */
+      .image-gallery-image {
+        width: 100% !important;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .image-gallery-image {
+          width: 1280px !important;
+        }
+      }
+
+      /*ipad and below */
+      .aos_sponsorship_link {
+        font-size: 14px;
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_sponsorship_link {
+          font-size: 18px;
+          font-weight: bold;
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+
+      /*ipad and below */
+      .aos_desktop_right_ads_container {
+        display: none;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_desktop_right_ads_container {
+          display: block;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_screen_container {
+        margin-left: 5%; /* 5%; */
+        margin-right: 5%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_screen_container {
+          margin-left: 5%;
+          margin-right: 0;
+          display: flex;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_inner_screen_container {
+        width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_inner_screen_container {
+          width: 95%;
+        }
+      }
+
+      /*ipad and below
+      .aos_license_text_metadata {
+        margin-top: 0 !important;
+      }
+
+      everything larger than ipad
+      @media screen and (min-width: 1024px) {
+        .aos_license_text_metadata {
+          margin-top: 0 !important;
+        }
+      }*/
+
+/* begin ads */
+
+  /* go with this since data-ad-format="fluid" isn't smart enough - had this for a year or so no issues */
+      .projects_list_ad_slot_native {
+        display: flex;
+        align-items: center;
+        /*min-height: 173;*/
+        /* actual height is 173, but to prevent cls for emoji rendering, add 20px */
+        min-height: 193px;
+        margin-left: -17px;
+        margin-top: -5px;
+      }
+
+      /* ads don't show up on mobile with carbon native */
+
+      .project_page_ad_slot_native {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        font-weight: 300;
+        flex-shrink: 0;
+        width: 82%;
+        min-width: 82%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .project_page_ad_slot_native {
+          align-items: center;
+          height: 100px;
+          font-weight: 300;
+          flex-shrink: 0;
+          width: 82%;
+          min-width: 82%;
+        }
+      }
+
+  /* end go with this if data-ad-format="fluid" isn't smart enough */
+
+      /* old and possibly related to invalid traffic due to cls
+      .projects_list_ad_slot_1 {
+        height: fit-content;
+      }
+      @media screen and (min-width: 1024px) {
+        .projects_list_ad_slot_1 {
+          height: fit-content;
+        }
+      }
+      .projects_list_ad_slot_2 {
+        height: fit-content;
+        margin-top: -34px;
+      }
+      @media screen and (min-width: 1024px) {
+        .projects_list_ad_slot_2 {
+          height: fit-content;
+          margin-top: 0;
+        }
+      }
+      .project_page_ad_slot_1 {
+        display: block;
+        height: fit-content;
+      }
+      @media screen and (min-width: 1024px) {
+        .project_page_ad_slot_1 {
+          display: block;
+          height: fit-content;
+        }
+      }
+      .project_page_ad_slot_2 {
+        display: block;
+        height: fit-content;
+      }
+      @media screen and (min-width: 1024px) {
+        .project_page_ad_slot_2 {
+          display: block;
+          height: fit-content;
+        }
+      }
+      */
+
+
+/* end ads */
+
+
+      /*ipad and below */
+      .aos_category_explorer_category_container {
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_category_explorer_category_container {
+          background-color: white;
+          padding: 10px;
+          margin-bottom: 0px;
+          border-bottom: 1px solid lightgray;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+        }
+      }
+
+      .aos_category_explorer_category_container:first-child {
+        border-top: 1px solid lightgray;
+      }
+
+      /*ipad and below */
+      .aos_topic_count {
+        font-size: 10px;
+        color: #4f4f4f;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_topic_count {
+          font-size: 16px;
+          color: #4f4f4f;
+        }
+      }
+
+      /*ipad and below */
+      .aos_topic_icon {
+        display: none;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_topic_icon {
+          font-size: 14px;
+          display: inline-block;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_count {
+        color: #4f4f4f;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_count {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_star {
+        font-size: 14px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_star {
+          font-size: 14px;
+          /*margin-right: 7px;*/
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_metadata_trademark_notice {
+        font-size: 8px;
+        color: gray;
+        margin-top: 10px;
+        padding-bottom: 3px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata_trademark_notice {
+          font-size: 12px;
+          color: gray;
+          margin-top: 20px;
+          padding-bottom: 5px;
+        }
+      }
+
+      .aos_project_notice {
+        border: 1px solid #888;
+        padding: 20px 12px;
+        border-radius: 5px;
+        margin: 15px 0;
+        box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.25);
+        font-size: 18px;
+      }
+
+      /*ipad and below */
+      .aos_project_metadata_description {
+        margin-bottom: 10px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata_description {
+          margin-bottom: 5px;
+        }
+      }
+
+      .aos_project_metadata {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata {
+          display: inline-block;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_metadata_content {
+        /*border-bottom: 1px solid lightgray;*/
+        font-size: 16px;
+        color: #000000;
+        font-weight: 300;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata_content {
+          /*border-bottom: 1px solid lightgray;*/
+          font-size: 16px;
+          color: #000000;
+          font-weight: 300;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_metadata_header {
+        color: #808080;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .aos_project_metadata_topics_topic {
+        display: block;
+        text-decoration: none;
+        padding-bottom: 10px;
+      }
+
+      .aos_project_metadata_topics_topic:last-child {
+        padding-bottom: 0;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata_header {
+          color: #808080;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          font-size: 16px;
+        }
+      }
+
+      aos_project_metadata_header:hover {
+        color: #808080;
+      }
+
+      /*ipad and below */
+      .aos_project_metadata_title {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_metadata_title {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .aos_project_section_title {
+        color: black;
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .aos_project_section_title caption {
+        display: inline-block;
+        font-size: 24px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_section_title {
+          color: black;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          font-size: 16px;
+        }
+      }
+
+      .aos_project_section_title:hover {
+        color: black;
+      }
+
+      /*ipad and below */
+      .aos_app_container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 2px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_app_container {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 1025px) {
+        .aos_desktop_ad_spacer {
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_show_ad_on_mobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .aos_show_ad_on_mobile {
+          /*display: inline-block;*/
+          display: block; /*adsense recommended*/
+        }
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1025px) {
+        .aos_show_ad_on_desktop {
+          /*display: inline-block;*/
+          display: block; /*adsense recommended*/
+        }
+      }
+
+      /*ipad and below */
+      @media screen and (max-width: 1024px) {
+        .aos_show_ad_on_desktop {
+          display: none;
+        }
+      }
+
+      /*ipad and below */
+      .aos_filter_topics_input {
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid lightgray;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px lightgrey;
+        margin-bottom: 20px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_filter_topics_input {
+          font-size: 20px;
+          padding: 10px;
+          border: 1px solid lightgray;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 1px 1px 5px lightgrey;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* ipad and below */
+      .aos_topics_project {
+        font-family: helvetica, arial, sans-serif;
+        font-size: 12px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_topics_project {
+          font-family: helvetica, arial, sans-serif;
+          margin-bottom: 0;
+          font-size: 20px;
+          border-radius: 10px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+        }
+      }
+
+      /* ipad and below
+      .aos_topics_sidebar {
+        font-family: helvetica, arial, sans-serif;
+        font-size: 12px;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 94%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+       everything larger than ipad
+      @media screen and (min-width: 1024px) {
+        .aos_topics_sidebar {
+          font-family: helvetica, arial, sans-serif;
+          margin-left: 5%;
+          margin-right: 2%;
+          width: 30%;
+          margin-bottom: 0;
+          font-size: 20px;
+          border-radius: 10px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+        }
+      }*/
+
+      .pills_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding: 0;
+        padding-top: 2px;
+        padding-left: 2px;
+        margin-right: 8px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .pills_container {
+          padding: 15px;
+          padding-bottom: 0px;
+          margin-right: 20px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_pill_box {
+        display: flex;
+        color: black;
+        border-radius: 5px;
+        padding: 2px;
+        margin: 2px;
+        align-items: center;
+        border-color: black;
+        background-color: white;
+        font-size: 12px;
+        border: 1px solid black;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_pill_box {
+          display: flex;
+          color: black;
+          border-radius: 5px;
+          padding: 5px;
+          /* margin: 10px; */
+          align-items: center;
+          border: 0;
+          background-color: white;
+          box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.25);
+          font-size: 16px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_selected_topics_text_container {
+        display: none;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_selected_topics_text_container {
+          flex: 1;
+          margin-left: 25px;
+          margin-right: 10px;
+          /* margin-bottom: 10px; */
+          /* margin-top: 10px; */
+          padding: 5px;
+          font-weight: bold;
+          font-size: 20px;
+          white-space: nowrap;
+          display: inline-block;
+        }
+      }
+
+      /*ipad and below */
+      .aos_pagenavigator_links_container {
+        display: flex;
+        justify-content: space-around;
+        font-size: 12px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_pagenavigator_links_container {
+          display: flex;
+          justify-content: space-around;
+          font-size: 16px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_container {
+        padding-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5px;
+        width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_container {
+          /*border-radius: 10px;*/
+          padding-bottom: 20px;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 5px;
+          width: 100%;
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_description {
+        font-size: 16px;
+        width: 100%;
+        font-weight: 300; /* match adsense */
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_description {
+          font-size: 16px;
+          font-weight: 300; /* match adsense */
+        }
+      }
+
+      /*ipad and below */
+      .aos_project_title {
+        font-size: 20px;
+        margin-bottom: 2px;
+        font-weight: 400; /* match adsense */
+        width: 100%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_project_title {
+          font-size: 20px;
+          margin-bottom: 2px;
+          font-weight: 400; /* match adsense */
+        }
+      }
+
+      .aos_project_title a :hover {
+        text-decoration: none !important;
+      }
+
+      .aos_no_underline:hover {
+        text-decoration: none !important;
+      }
+
+      .aos_grey_link:hover {
+        color: #808080 !important;
+      }
+
+      .aos_grey_link {
+        color: #808080 !important;
+      }
+
+      /*ipad and below */
+      .category_topic_filter_container {
+        width: 94%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .category_topic_filter_container {
+          width: 94%;
+        }
+      }
+
+      /*ipad and below */
+      .aos_projects_container {
+        font-family: helvetica, arial, sans-serif;
+        margin-right: 5%;
+        width: 90%;
+        font-size: 14px;
+        margin-bottom: 0px;
+        margin-left: 5%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_projects_container {
+          font-family: helvetica, arial, sans-serif;
+          margin-right: 5%%;
+          width: 90%;
+          font-size: 18px;
+          margin-bottom: 0px;
+          min-width: 800px;
+          margin-left: 5%;
+        }
+      }
+
+      .aos_similar_topics a div {
+        /* font-size: 18px; */
+        font-family: helvetica, arial, sans-serif;
+        text-decoration: none !important;
+      }
+
+      .aos_similar_topics a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .aos_similar_topics a:hover {
+        text-decoration: underline;
+        color: black !important; 
+      }
+
+      .aos_links_container a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .aos_links_container a:hover {
+        text-decoration: underline;
+        color: black !important; 
+      }
+
+      /*ipad and below */
+      .aos_pagenavigator_container {
+        display: flex;
+        justify-content: center;
+        font-size: 9px;
+        margin-bottom: 0;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_pagenavigator_container {
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_header_title_container_ipad_and_smaller {
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 134px;
+        white-space: nowrap;
+        flex-direction: column;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_header_title_container_ipad_and_smaller {
+          display: none;
+        }
+      }
+
+
+      /*ipad and below */
+      .aos_header_title_container_larger_than_ipad {
+        display: none;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_header_title_container_larger_than_ipad {
+          display: block;
+        }
+      }
+
+      /*ipad and below */
+      .aos_logo_image {
+        height: 25px;
+        width: 25px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_logo_image {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      /*ipad and below */
+      .aos_fixed_footer_container {
+        display: flex;
+        margin-left: 5%; /* 0; */
+        margin-right: 20%; /* 0; */
+        margin-top: 3px;
+        width: 93%;
+        justify-content: left;
+        font-size: 8px;
+        color: gray;
+        padding-bottom: 1px;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 25px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_fixed_footer_container {
+          display: flex;
+          margin-left: 5%;
+          margin-right: 5%;
+          margin-top: 5px;
+          width: 89%;
+          justify-content: left;
+          font-size: 12px;
+          padding-bottom: 1px;
+          border-bottom: 1px solid lightgray;
+        }
+      }
+
+      /*ipad and below */
+      .aos_fixed_header_container {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 4px;
+        margin-bottom: 5px;
+        width: 96%;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_fixed_header_container {
+          margin-left: 5%;
+          margin-right: 20%;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          width: 75%;
+        }
+      }
+
+      /*ipad and below */
+      body {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        padding: 0
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        body {
+          margin-top: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          padding: 0
+        }
+      }
+
+      /* ipad and below */
+      .aos_topics_sidebar_link {
+        width: 100%;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+      }
+
+      /* everything larger than ipad */
+      @media screen and (min-width: 1024px) {
+        .aos_topics_sidebar_link {
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 18px;
+        }
+      }
+
+      html {
+        margin: 0;
+        padding: 0
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        /*color: #0366d6;*/
+        color: #000000; /* match adsense */
+        text-decoration: underline;
+      }
+
+      .AOS_Pill:hover {
+        text-decoration: none;
+      }
+
+      /* MIT licensed github-markdown.css */
+      /* https://github.com/sindresorhus/github-markdown-css */
+      @font-face {
+        font-family: octicons-link;
+        src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+      }
+      .markdown-body {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.5;
+        color: #24292e;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+      .markdown-body .pl-c {
+        color: #6a737d;
+      }
+      .markdown-body .pl-c1,
+      .markdown-body .pl-s .pl-v {
+        color: #005cc5;
+      }
+      .markdown-body .pl-e,
+      .markdown-body .pl-en {
+        color: #6f42c1;
+      }
+      .markdown-body .pl-smi,
+      .markdown-body .pl-s .pl-s1 {
+        color: #24292e;
+      }
+      .markdown-body .pl-ent {
+        color: #22863a;
+      }
+      .markdown-body .pl-k {
+        color: #d73a49;
+      }
+      .markdown-body .pl-s,
+      .markdown-body .pl-pds,
+      .markdown-body .pl-s .pl-pse .pl-s1,
+      .markdown-body .pl-sr,
+      .markdown-body .pl-sr .pl-cce,
+      .markdown-body .pl-sr .pl-sre,
+      .markdown-body .pl-sr .pl-sra {
+        color: #032f62;
+      }
+      .markdown-body .pl-v,
+      .markdown-body .pl-smw {
+        color: #e36209;
+      }
+      .markdown-body .pl-bu {
+        color: #b31d28;
+      }
+      .markdown-body .pl-ii {
+        color: #fafbfc;
+        background-color: #b31d28;
+      }
+      .markdown-body .pl-c2 {
+        color: #fafbfc;
+        background-color: #d73a49;
+      }
+      .markdown-body .pl-c2::before {
+        content: "^M";
+      }
+      .markdown-body .pl-sr .pl-cce {
+        font-weight: bold;
+        color: #22863a;
+      }
+      .markdown-body .pl-ml {
+        color: #735c0f;
+      }
+      .markdown-body .pl-mh,
+      .markdown-body .pl-mh .pl-en,
+      .markdown-body .pl-ms {
+        font-weight: bold;
+        color: #005cc5;
+      }
+      .markdown-body .pl-mi {
+        font-style: italic;
+        color: #24292e;
+      }
+      .markdown-body .pl-mb {
+        font-weight: bold;
+        color: #24292e;
+      }
+      .markdown-body .pl-md {
+        color: #b31d28;
+        background-color: #ffeef0;
+      }
+      .markdown-body .pl-mi1 {
+        color: #22863a;
+        background-color: #f0fff4;
+      }
+      .markdown-body .pl-mc {
+        color: #e36209;
+        background-color: #ffebda;
+      }
+      .markdown-body .pl-mi2 {
+        color: #f6f8fa;
+        background-color: #005cc5;
+      }
+      .markdown-body .pl-mdr {
+        font-weight: bold;
+        color: #6f42c1;
+      }
+      .markdown-body .pl-ba {
+        color: #586069;
+      }
+      .markdown-body .pl-sg {
+        color: #959da5;
+      }
+      .markdown-body .pl-corl {
+        text-decoration: underline;
+        color: #032f62;
+      }
+      .markdown-body .octicon {
+        display: inline-block;
+        vertical-align: text-top;
+        fill: currentColor;
+      }
+      .markdown-body a {
+        background-color: transparent;
+      }
+      .markdown-body a:active,
+      .markdown-body a:hover {
+        outline-width: 0;
+      }
+      .markdown-body strong {
+        font-weight: inherit;
+      }
+      .markdown-body strong {
+        font-weight: bolder;
+      }
+      .markdown-body h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      .markdown-body img {
+        border-style: none;
+      }
+      .markdown-body code,
+      .markdown-body kbd,
+      .markdown-body pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      .markdown-body hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      .markdown-body input {
+        font: inherit;
+        margin: 0;
+      }
+      .markdown-body input {
+        overflow: visible;
+      }
+      .markdown-body [type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      .markdown-body * {
+        box-sizing: border-box;
+      }
+      .markdown-body input {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .markdown-body a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      .markdown-body a:hover {
+        text-decoration: underline;
+      }
+      .markdown-body strong {
+        font-weight: 600;
+      }
+      .markdown-body hr {
+        height: 0;
+        margin: 15px 0;
+        overflow: hidden;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #dfe2e5;
+      }
+      .markdown-body hr::before {
+        display: table;
+        content: "";
+      }
+      .markdown-body hr::after {
+        display: table;
+        clear: both;
+        content: "";
+      }
+      .markdown-body table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      .markdown-body td,
+      .markdown-body th {
+        padding: 0;
+      }
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .markdown-body h1 {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .markdown-body h2 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .markdown-body h3 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .markdown-body h4 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .markdown-body h5 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .markdown-body h6 {
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .markdown-body p {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      .markdown-body blockquote {
+        margin: 0;
+      }
+      .markdown-body ul,
+      .markdown-body ol {
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .markdown-body ol ol,
+      .markdown-body ul ol {
+        list-style-type: lower-roman;
+      }
+      .markdown-body ul ul ol,
+      .markdown-body ul ol ol,
+      .markdown-body ol ul ol,
+      .markdown-body ol ol ol {
+        list-style-type: lower-alpha;
+      }
+      .markdown-body dd {
+        margin-left: 0;
+      }
+      .markdown-body code {
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 12px;
+      }
+      .markdown-body pre {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 12px;
+      }
+      .markdown-body .octicon {
+        vertical-align: text-bottom;
+      }
+      .markdown-body .pl-0 {
+        padding-left: 0 !important;
+      }
+      .markdown-body .pl-1 {
+        padding-left: 4px !important;
+      }
+      .markdown-body .pl-2 {
+        padding-left: 8px !important;
+      }
+      .markdown-body .pl-3 {
+        padding-left: 16px !important;
+      }
+      .markdown-body .pl-4 {
+        padding-left: 24px !important;
+      }
+      .markdown-body .pl-5 {
+        padding-left: 32px !important;
+      }
+      .markdown-body .pl-6 {
+        padding-left: 40px !important;
+      }
+      .markdown-body::before {
+        display: table;
+        content: "";
+      }
+      .markdown-body::after {
+        display: table;
+        clear: both;
+        content: "";
+      }
+      .markdown-body>*:first-child {
+        margin-top: 0 !important;
+      }
+      .markdown-body>*:last-child {
+        margin-bottom: 0 !important;
+      }
+      .markdown-body a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+      .markdown-body .anchor {
+        float: left;
+        padding-right: 4px;
+        margin-left: -20px;
+        line-height: 1;
+      }
+      .markdown-body .anchor:focus {
+        outline: none;
+      }
+      .markdown-body p,
+      .markdown-body blockquote,
+      .markdown-body ul,
+      .markdown-body ol,
+      .markdown-body dl,
+      .markdown-body table,
+      .markdown-body pre {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      .markdown-body hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      .markdown-body blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+      }
+      .markdown-body blockquote>:first-child {
+        margin-top: 0;
+      }
+      .markdown-body blockquote>:last-child {
+        margin-bottom: 0;
+      }
+      .markdown-body kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: 11px;
+        line-height: 10px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: solid 1px #c6cbd1;
+        border-bottom-color: #959da5;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #959da5;
+      }
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      .markdown-body h1 .octicon-link,
+      .markdown-body h2 .octicon-link,
+      .markdown-body h3 .octicon-link,
+      .markdown-body h4 .octicon-link,
+      .markdown-body h5 .octicon-link,
+      .markdown-body h6 .octicon-link {
+        color: #1b1f23;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+      .markdown-body h1:hover .anchor,
+      .markdown-body h2:hover .anchor,
+      .markdown-body h3:hover .anchor,
+      .markdown-body h4:hover .anchor,
+      .markdown-body h5:hover .anchor,
+      .markdown-body h6:hover .anchor {
+        text-decoration: none;
+      }
+      .markdown-body h1:hover .anchor .octicon-link,
+      .markdown-body h2:hover .anchor .octicon-link,
+      .markdown-body h3:hover .anchor .octicon-link,
+      .markdown-body h4:hover .anchor .octicon-link,
+      .markdown-body h5:hover .anchor .octicon-link,
+      .markdown-body h6:hover .anchor .octicon-link {
+        visibility: visible;
+      }
+      .markdown-body h1 {
+        padding-bottom: 0.3em;
+        font-size: 2em;
+        border-bottom: 1px solid #eaecef;
+      }
+      .markdown-body h2 {
+        padding-bottom: 0.3em;
+        font-size: 1.5em;
+        border-bottom: 1px solid #eaecef;
+      }
+      .markdown-body h3 {
+        font-size: 1.25em;
+      }
+      .markdown-body h4 {
+        font-size: 1em;
+      }
+      .markdown-body h5 {
+        font-size: 0.875em;
+      }
+      .markdown-body h6 {
+        font-size: 0.85em;
+        color: #6a737d;
+      }
+      .markdown-body ul,
+      .markdown-body ol {
+        padding-left: 2em;
+      }
+      .markdown-body ul ul,
+      .markdown-body ul ol,
+      .markdown-body ol ol,
+      .markdown-body ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .markdown-body li {
+        word-wrap: break-all;
+      }
+      .markdown-body li>p {
+        margin-top: 16px;
+      }
+      .markdown-body li+li {
+        margin-top: 0.25em;
+      }
+      .markdown-body dl {
+        padding: 0;
+      }
+      .markdown-body dl dt {
+        padding: 0;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 600;
+      }
+      .markdown-body dl dd {
+        padding: 0 16px;
+        margin-bottom: 16px;
+      }
+      .markdown-body table {
+        display: block;
+        width: 100%;
+        overflow: auto;
+      }
+      .markdown-body table th {
+        font-weight: 600;
+      }
+      .markdown-body table th,
+      .markdown-body table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      .markdown-body table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      .markdown-body img {
+        max-width: 100%;
+        box-sizing: content-box;
+        background-color: #fff;
+      }
+      .markdown-body img[align=right] {
+        padding-left: 20px;
+      }
+      .markdown-body img[align=left] {
+        padding-right: 20px;
+      }
+      .markdown-body code {
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27,31,35,0.05);
+        border-radius: 3px;
+      }
+      .markdown-body pre {
+        word-wrap: normal;
+      }
+      .markdown-body pre>code {
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
+        background: transparent;
+        border: 0;
+      }
+      .markdown-body .highlight {
+        margin-bottom: 16px;
+      }
+      .markdown-body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+      .markdown-body .highlight pre,
+      .markdown-body pre {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+      }
+      .markdown-body pre code {
+        display: inline;
+        max-width: auto;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+      }
+      .markdown-body .full-commit .btn-outline:not(:disabled):hover {
+        color: #005cc5;
+        border-color: #005cc5;
+      }
+      .markdown-body kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        line-height: 10px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: solid 1px #d1d5da;
+        border-bottom-color: #c6cbd1;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #c6cbd1;
+      }
+      .markdown-body :checked+.radio-label {
+        position: relative;
+        z-index: 1;
+        border-color: #0366d6;
+      }
+      .markdown-body .task-list-item {
+        list-style-type: none;
+      }
+      .markdown-body .task-list-item+.task-list-item {
+        margin-top: 3px;
+      }
+      .markdown-body .task-list-item input {
+        margin: 0 0.2em 0.25em -1.6em;
+        vertical-align: middle;
+      }
+      .markdown-body hr {
+        border-bottom-color: #eee;
+      }
+      /* github-markdown.css overrides */
+      .markdown-body h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .hll { background-color: #ffffcc }
+      .c { color: #008000 } /* Comment */
+      .err { border: 1px solid #FF0000 } /* Error */
+      .k { color: #0000ff } /* Keyword */
+      .cm { color: #008000 } /* Comment.Multiline */
+      .cp { color: #0000ff } /* Comment.Preproc */
+      .c1 { color: #008000 } /* Comment.Single */
+      .cs { color: #008000 } /* Comment.Special */
+      .ge { font-style: italic } /* Generic.Emph */
+      .gh { font-weight: bold } /* Generic.Heading */
+      .gp { font-weight: bold } /* Generic.Prompt */
+      .gs { font-weight: bold } /* Generic.Strong */
+      .gu { font-weight: bold } /* Generic.Subheading */
+      .kc { color: #0000ff } /* Keyword.Constant */
+      .kd { color: #0000ff } /* Keyword.Declaration */
+      .kn { color: #0000ff } /* Keyword.Namespace */
+      .kp { color: #0000ff } /* Keyword.Pseudo */
+      .kr { color: #0000ff } /* Keyword.Reserved */
+      .kt { color: #2b91af } /* Keyword.Type */
+      .s { color: #a31515 } /* Literal.String */
+      .nc { color: #2b91af } /* Name.Class */
+      .ow { color: #0000ff } /* Operator.Word */
+      .sb { color: #a31515 } /* Literal.String.Backtick */
+      .sc { color: #a31515 } /* Literal.String.Char */
+      .sd { color: #a31515 } /* Literal.String.Doc */
+      .s2 { color: #a31515 } /* Literal.String.Double */
+      .se { color: #a31515 } /* Literal.String.Escape */
+      .sh { color: #a31515 } /* Literal.String.Heredoc */
+      .si { color: #a31515 } /* Literal.String.Interpol */
+      .sx { color: #a31515 } /* Literal.String.Other */
+      .sr { color: #a31515 } /* Literal.String.Regex */
+      .s1 { color: #a31515 } /* Literal.String.Single */
+      .ss { color: #a31515 } /* Literal.String.Symbol */
+
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "lambtron/emojipacks",
+  "description": "CLI to bulk upload emojis to your Slack",
+  "url": "https://awesomeopensource.com/project/lambtron/emojipacks",
+  "sku": "project/lambtron/emojipacks",
+  "mpn": "project/lambtron/emojipacks",
+  "image": "https://github.com/lambtron.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "lambtron/emojipacks",
+    "logo": "https://github.com/lambtron.png"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.87",
+    "ratingCount": "1243"
+  }
+}
+</script>
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="z40/ZXEcAkdfFr0qRkN2yx6FVhhLvbabuGhSaPvM18wOyuaJPNcMrYabjU9nfKJsjeJnc2uoTINjchqfXuYhyQ==" />
+    <link rel="stylesheet" media="screen" href="/assets/application-e4a99230b9c75fa5b56b3dbf9b4c68f1d09ad6da770886bdd158416ab9309971.css" />
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+  <body>
+    <script type="application/json" id="js-react-on-rails-context">{"railsEnv":"production","inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","rorVersion":"11.2.1","rorPro":false,"href":"https://awesomeopensource.com/project/lambtron/emojipacks","location":"/project/lambtron/emojipacks","scheme":"https","host":"awesomeopensource.com","port":null,"pathname":"/project/lambtron/emojipacks","search":null,"httpAcceptLanguage":"en-US,en;q=0.5","serverSide":false}</script>
+<div id="Root-react-component-2b7730c5-981d-41ac-a7a2-8c417852d67d"><div style="font-family:helvetica, arial, sans-serif" data-reactroot=""><div class="aos_fixed_header_container"><div class="display_flex margin_bottom_15"><div style="margin-right:1%;display:flex;align-items:center"><a href="https://awesomeopensource.com" title="Awesome Open Source Home" rel="canonical"><img src="https://awesomeopensource.com/awesome.gif" class="aos_logo_image"/></a></div><div class="aos_header_title_container_larger_than_ipad"><div style="white-space:nowrap;font-size:24px;font-weight:bold;display:flex;flex-direction:row;align-items:center;height:100%"><div>Awesome Open Source</div></div></div><div class="aos_header_title_container_ipad_and_smaller"><div>Awesome Open Source</div></div><div class="pills_container"></div></div><div></div></div><div class="aos_project_screen_container"><div class="aos_project_inner_screen_container"><div style="display:none"></div><div class="aos_project_metadata"><div><div class="aos_project_metadata_title">Emojipacks</div><div class="aos_project_metadata_description">CLI to bulk upload emojis to your Slack</div><div class="aos_project_metadata_header">Stars</div><span class="aos_project_metadata_content">1,243</span><div class="carbon-project-page-native-ad-1 project_page_ad"></div><div class="aos_project_metadata_header aos_license_text_metadata">License</div><span class="aos_project_metadata_content">mit</span><div class="aos_project_metadata_header"><a href="https://github.com/lambtron/emojipacks/issues" target="_blank" class="aos_grey_link" rel="nofollow">Open Issues</a></div><span class="aos_project_metadata_content"><a href="https://github.com/lambtron/emojipacks/issues" target="_blank" rel="nofollow">28</a></span><div class="aos_project_metadata_header">Most Recent Commit</div><span class="aos_project_metadata_content">2 years ago</span><div class="carbon-project-page-native-ad-2 project_page_ad"></div><div class="aos_project_metadata_header"><a href="https://emojipacks.com" target="_blank" rel="nofollow" class="aos_grey_link">Site</a></div><div class="aos_project_metadata_header"><a href="https://github.com/lambtron/emojipacks" target="_blank" class="aos_grey_link">Repo</a></div></div><div class="aos_project_metadata_header">Related Projects</div><a href="https://awesomeopensource.com/projects/html"><div style="display:block;padding:5px">Html Projects (428,002)</div></a><a href="https://awesomeopensource.com/projects/slack"><div style="display:block;padding:5px">Slack Projects (2,931)</div></a><a href="https://awesomeopensource.com/projects/emoji"><div style="display:block;padding:5px">Emoji Projects (1,332)</div></a><a href="https://awesomeopensource.com/projects/emojis"><div style="display:block;padding:5px">Emojis Projects (249)</div></a></div><div class="markdown-body"><h1>
+<a id="user-content-emojipacks" class="anchor" aria-hidden="true" name="emojipacks"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>emojipacks</h1>
+<p><a href="https://travis-ci.org/lambtron/emojipacks" rel="nofollow"><img src="https://travis-ci.org/lambtron/emojipacks.svg?branch=master" alt="Build Status"></a></p>
+<blockquote>
+<p>CLI to bulk upload emojis to your Slack!</p>
+</blockquote>
+<h2>
+<a id="user-content-install" class="anchor" aria-hidden="true" name="install"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install</h2>
+<p><em>Note you must have <code>node</code> and <code>npm</code> installed. If you don't, go to <a href="https://www.nodejs.org" rel="nofollow">nodejs.org</a> and follow the install instructions there.</em></p>
+<pre lang="bash"><code>$ npm install -g emojipacks
+</code></pre>
+<p>or</p>
+<pre lang="bash"><code>$ git clone <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93f4fae7d3f4fae7fbe6f1bdf0fcfe">[email&#160;protected]</a>:lambtron/emojipacks.git
+$ cd emojipacks
+$ make
+</code></pre>
+<h2>
+<a id="user-content-usage" class="anchor" aria-hidden="true" name="usage"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<p>There is only one command:</p>
+<pre lang="bash"><code>$ emojipacks
+</code></pre>
+<p>It'll ask you a few questions:</p>
+<pre lang="bash"><code>Slack subdomain: 20percentclub
+Email address login: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9efff0fae7f4f7fff0f9def9f3fff7f2b0fdf1f3">[email&#160;protected]</a>
+Password: *********
+2FA Code: 123456  #  if 2FA is enabled
+Path or URL of Emoji yaml file: ./packs/futurama.yaml
+</code></pre>
+<p>Then, let it work its magic:</p>
+<pre lang="bash"><code>Starting import
+Got tokens
+Logged in
+Upload crumb is s-1437797544-90b75206a7-☃
+Getting emoji page
+Uploading bender with http://i.imgur.com/7zYM751.png
+Uploading amywong with http://i.imgur.com/DgKkcCi.png
+ .
+ .
+ .
+Uploading hypnotoad with http://i.imgur.com/o7tyjxN.gif
+Uploaded emojis
+</code></pre>
+<p>Note that the emoji pack to upload can be a <strong>path</strong> to a yaml file on your machine or a <strong>URL</strong>, like <a href="http://www.emojipacks.com/packs/food.yaml" rel="nofollow">http://www.emojipacks.com/packs/food.yaml</a>.</p>
+<h2>
+<a id="user-content-optionally-pass-command-line-parameters" class="anchor" aria-hidden="true" name="optionally-pass-command-line-parameters"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optionally Pass Command Line Parameters</h2>
+<p>This will allow for easier batch uploading of multiple yaml files</p>
+<pre lang="bash"><code>$ emojipacks -s &lt;subdomain&gt; -e &lt;email&gt; -p &lt;password&gt; -y &lt;yaml_file&gt;
+</code></pre>
+<h2>
+<a id="user-content-run-batch-upload-script" class="anchor" aria-hidden="true" name="run-batch-upload-script"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run Batch Upload script</h2>
+<p>A file named batchUploadExample.sh is provided for your reference. Edit this file change the subdomain, email, and password parameters to your own and save it as batchUpload.sh or something similar.</p>
+<p>This script will aid in the process of batch uploading.</p>
+<p>It optionally takes an argument for the directory path that contains your yaml files. If this is not provided './packs' will be used by default.</p>
+<pre lang="bash"><code>$ ./batchUpload.sh [path_to_yaml_files]
+</code></pre>
+<h2>
+<a id="user-content-emoji-yaml-file" class="anchor" aria-hidden="true" name="emoji-yaml-file"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emoji Yaml File</h2>
+<p>Also note that the yaml file must be indented properly and formatted as such:</p>
+<pre lang="yaml"><code>title: food
+emojis:
+  - name: apple
+    src: http://i.imgur.com/Rw0Vlda.png
+  - name: applepie
+    src: http://i.imgur.com/g4RU1fM.png
+</code></pre>
+<p>..with the <code>src</code> pointing to an image file. According to Slack:</p>
+<ul>
+<li>Square images work best</li>
+<li>Image can't be larger than 128px in width or height</li>
+<li>Image must be smaller than 64K in file size</li>
+</ul>
+<h3>
+<a id="user-content-emoji-aliases" class="anchor" aria-hidden="true" name="emoji-aliases"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emoji Aliases</h3>
+<p>It is possible to give multiple names to a single emoji using yaml such as:</p>
+<pre lang="yaml"><code>title: octicons
+emojis:
+  - name: pr
+    aliases:
+      - pullrequest
+      - mergerequest
+    src: https://i.imgur.com/rhwNxfc.png
+</code></pre>
+<h2>
+<a id="user-content-emoji-packs" class="anchor" aria-hidden="true" name="emoji-packs"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emoji packs</h2>
+<ul>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/animals.yaml" rel="nofollow">animals</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/clippy.yaml" rel="nofollow">clippy</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/fika.yaml" rel="nofollow">fika</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/frontend.yaml" rel="nofollow">frontend</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/harrypotterhouses.yaml" rel="nofollow">harrypotter</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/mario-8bit.yaml" rel="nofollow">mario</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/occupy.yaml" rel="nofollow">occupy</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/officespace.yaml" rel="nofollow">officespace</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/omnom.yaml" rel="nofollow">omnom</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/futurama.yaml" rel="nofollow">futurama</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/food.yaml" rel="nofollow">food</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/skype.yaml" rel="nofollow">skype</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/starwars.yaml" rel="nofollow">starwars</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/startups.yaml" rel="nofollow">startups</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/businessfish.yaml" rel="nofollow">businessfish</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/hipchat.yaml" rel="nofollow">hipchat</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/twitch.yaml" rel="nofollow">twitch</a></li>
+<li>
+<a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/parrotparty.yaml" rel="nofollow">parrotparty</a> (<a href="http://cultofthepartyparrot.com/" rel="nofollow">Parrot</a> <a href="http://cultofthepartyparrot.com/paint/" rel="nofollow">Paint</a>)</li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/finland.yaml" rel="nofollow">Finland</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/pokemongo.yaml" rel="nofollow">pokemongo: items</a></li>
+<li>
+<a href="https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon.yaml" rel="nofollow">Pokémon Go: Pokémon</a> (<a href="https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon-prefix.yaml" rel="nofollow">Prefixed <code>pokemon-*</code></a>)</li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/politipack.yaml" rel="nofollow">politipack</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/nekoatsume.yaml" rel="nofollow">nekoatsume</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/octicons.yaml" rel="nofollow">octicons</a></li>
+<li><a href="https://raw.githubusercontent.com/jaylynch/pokemoji/master/pokemon-by-name.yaml" rel="nofollow">pokemon</a></li>
+<li>
+<a href="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/devicon.yaml" rel="nofollow">devicon</a> (<a href="http://devicon.fr/" rel="nofollow">Devicon</a>)</li>
+<li>
+<a href="https://raw.githubusercontent.com/snipe/hamsterdance-emojipack/master/hamsterdance.yaml" rel="nofollow">hamsterdance</a> (<a href="https://awesomeopensource.com/project/snipe/hamsterdance-emojipack">snipe/emojipacks</a>)</li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/avengers.yaml" rel="nofollow">avengers</a></li>
+<li>
+<a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/shiba.yaml" rel="nofollow">Shiba Stickers</a> (from Messenger)</li>
+<li><a href="https://raw.githubusercontent.com/niksudan/gamedevmoji/master/gamedevicons.yaml" rel="nofollow">gamedevmoji</a></li>
+<li><a href="https://raw.githubusercontent.com/Surgo/aws_emojipacks/master/noprefix-emojipacks.yml" rel="nofollow">AWS simple icons</a></li>
+</ul>
+<h3>
+<a id="user-content-emoji-packs-from-slackmojiscom" class="anchor" aria-hidden="true" name="emoji-packs-from-slackmojiscom"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emoji packs from <a href="http://www.slackmojis.com" rel="nofollow">slackmojis.com</a>
+</h3>
+<ul>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-uncategorized.yaml" rel="nofollow">Uncategorized</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-facebook-reaction.yaml" rel="nofollow">Facebook Reaction</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-logo.yaml" rel="nofollow">Logo</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-meme.yaml" rel="nofollow">Meme</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-mlb.yaml" rel="nofollow">MLB</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nba.yaml" rel="nofollow">NBA</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nfl.yaml" rel="nofollow">NFL</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nhl.yaml" rel="nofollow">NHL</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nyc-subway.yaml" rel="nofollow">NYC Subway</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-party-parrot.yaml" rel="nofollow">Party Parrot</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-pokemon.yaml" rel="nofollow">Pokemon</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-retro-game.yaml" rel="nofollow">Retro Game</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-scrabble-letters.yaml" rel="nofollow">Scrabble Letters</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-skype.yaml" rel="nofollow">Skype</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-star-wars.yaml" rel="nofollow">Star Wars</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-turntable.fm.yaml" rel="nofollow">Turntable.fm</a></li>
+<li><a href="https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-yoyo.yaml" rel="nofollow">Yoyo</a></li>
+</ul>
+<p><img src="https://media1.giphy.com/media/68H7QjnqFOn2E/100.gif" alt=""></p>
+<p>Want to contribute? <a href="https://20p.typeform.com/to/xOFDyq" rel="nofollow">Suggest an emoji pack</a>!</p>
+<h2>
+<a id="user-content-troubleshooting" class="anchor" aria-hidden="true" name="troubleshooting"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting</h2>
+<p>This script will essentially log into your Slack and then submit a <code>POST</code> request on the emoji upload form page. If you are seeing errors, make sure that:</p>
+<ul>
+<li>
+<strong>you have Slack privileges to add custom emojis</strong>: otherwise, the script won't be able to get to the emoji upload form</li>
+<li>
+<strong>your credentials are correct</strong>: if you have done all of the following correctly try running the command <strong>emojipacks -d</strong>
+</li>
+</ul>
+<p><em>Still having issues? Create an issue <a href="https://github.com/lambtron/emojipacks/issues/new" rel="nofollow">here</a>.</em></p>
+<p><em>Enjoyed this project? Check out my <a href="http://blog.andyjiang.com" rel="nofollow">blog</a> for more</em>.</p>
+<h2>
+<a id="user-content-license-mit" class="anchor" aria-hidden="true" name="license-mit"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License (MIT)</h2>
+<pre><code>WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o|    MIT     \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__|
+</code></pre>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</div><div><br/><div style="border:1px solid gray;border-radius:5px;background-color:lightgray;padding:2%"><div style="font-size:24px;font-weight:bold;margin-bottom:10px">Get A Weekly Email With Trending Projects For These Topics</div><div style="margin-bottom:10px">No Spam.  Unsubscribe easily at any time.</div><div><div><input type="checkbox" name="topics" value="Html"/> <!-- -->Html<!-- --> (<!-- -->428,002<!-- -->) </div><div><input type="checkbox" name="topics" value="Slack"/> <!-- -->Slack<!-- --> (<!-- -->2,931<!-- -->) </div><div><input type="checkbox" name="topics" value="Emoji"/> <!-- -->Emoji<!-- --> (<!-- -->1,332<!-- -->) </div><div><input type="checkbox" name="topics" value="Emojis"/> <!-- -->Emojis<!-- --> (<!-- -->249<!-- -->) </div></div><div><input type="email" style="width:95%;margin-top:10px;margin-bottom:10px;padding:5px;font-size:20px;border-radius:5px" name="email" placeholder="Your email address"/></div><div><input type="submit" style="color:white;background-color:#0366d6;font-size:20px;border:1px solid black;border-radius:5px;padding:5px;cursor:pointer" value="Subscribe"/></div></div></div><div style="margin-top:30px" class="aos_project_section_title"><caption>Related Projects</caption></div><span class="aos_links_container aos_project_metadata_content"><a href="https://awesomeopensource.com/projects/emoji/emojis"><div style="display:block;padding:5px">Emoji Emojis Projects (119)</div></a><a href="https://awesomeopensource.com/projects/emoji/slack"><div style="display:block;padding:5px">Slack Emoji Projects (74)</div></a><a href="https://awesomeopensource.com/projects/emoji/html"><div style="display:block;padding:5px">Html Emoji Projects (65)</div></a><a href="https://awesomeopensource.com/projects/html/slack"><div style="display:block;padding:5px">Html Slack Projects (47)</div></a><a href="https://awesomeopensource.com/projects/emojis/html"><div style="display:block;padding:5px">Html Emojis Projects (15)</div></a><a href="https://awesomeopensource.com/projects/emojis/slack"><div style="display:block;padding:5px">Slack Emojis Projects (14)</div></a><a href="https://awesomeopensource.com/projects/emoji/emojis/slack"><div style="display:block;padding:5px">Slack Emoji Emojis Projects (8)</div></a><a href="https://awesomeopensource.com/projects/emoji/emojis/html"><div style="display:block;padding:5px">Html Emoji Emojis Projects (7)</div></a><a href="https://awesomeopensource.com/projects/emoji/html/slack"><div style="display:block;padding:5px">Html Slack Emoji Projects (3)</div></a></span><div class="show_on_phones twenty_px_padding_top"><div class="aos_topics_sidebar" style="margin:0;width:100%"><div class="category_topic_filter_container"><input style="width:100%" placeholder="Search, browse and combine topics" value="" class="aos_filter_topics_input"/></div><div style="display:block;box-shadow:1px 1px 5px lightgray"><a data-category-name="Advertising" href="https://awesomeopensource.com/categories/advertising"><div class="aos_category_explorer_category_container" data-category-name="Advertising"><span data-category-name="Advertising">Advertising<span data-category-name="Advertising" class="aos_project_count"> 📦 <!-- -->9</span></span></div></a><a data-category-name="All Projects" href="https://awesomeopensource.com/projects"><div class="aos_category_explorer_category_container" data-category-name="All Projects"><span data-category-name="All Projects">All Projects</span></div></a><a data-category-name="Application Programming Interfaces" href="https://awesomeopensource.com/categories/application-programming-interfaces"><div class="aos_category_explorer_category_container" data-category-name="Application Programming Interfaces"><span data-category-name="Application Programming Interfaces">Application Programming Interfaces<span data-category-name="Application Programming Interfaces" class="aos_project_count"> 📦 <!-- -->120</span></span></div></a><a data-category-name="Applications" href="https://awesomeopensource.com/categories/applications"><div class="aos_category_explorer_category_container" data-category-name="Applications"><span data-category-name="Applications">Applications<span data-category-name="Applications" class="aos_project_count"> 📦 <!-- -->181</span></span></div></a><a data-category-name="Artificial Intelligence" href="https://awesomeopensource.com/categories/artificial-intelligence"><div class="aos_category_explorer_category_container" data-category-name="Artificial Intelligence"><span data-category-name="Artificial Intelligence">Artificial Intelligence<span data-category-name="Artificial Intelligence" class="aos_project_count"> 📦 <!-- -->72</span></span></div></a><a data-category-name="Blockchain" href="https://awesomeopensource.com/categories/blockchain"><div class="aos_category_explorer_category_container" data-category-name="Blockchain"><span data-category-name="Blockchain">Blockchain<span data-category-name="Blockchain" class="aos_project_count"> 📦 <!-- -->70</span></span></div></a><a data-category-name="Build Tools" href="https://awesomeopensource.com/categories/build-tools"><div class="aos_category_explorer_category_container" data-category-name="Build Tools"><span data-category-name="Build Tools">Build Tools<span data-category-name="Build Tools" class="aos_project_count"> 📦 <!-- -->111</span></span></div></a><a data-category-name="Cloud Computing" href="https://awesomeopensource.com/categories/cloud-computing"><div class="aos_category_explorer_category_container" data-category-name="Cloud Computing"><span data-category-name="Cloud Computing">Cloud Computing<span data-category-name="Cloud Computing" class="aos_project_count"> 📦 <!-- -->79</span></span></div></a><a data-category-name="Code Quality" href="https://awesomeopensource.com/categories/code-quality"><div class="aos_category_explorer_category_container" data-category-name="Code Quality"><span data-category-name="Code Quality">Code Quality<span data-category-name="Code Quality" class="aos_project_count"> 📦 <!-- -->28</span></span></div></a><a data-category-name="Collaboration" href="https://awesomeopensource.com/categories/collaboration"><div class="aos_category_explorer_category_container" data-category-name="Collaboration"><span data-category-name="Collaboration">Collaboration<span data-category-name="Collaboration" class="aos_project_count"> 📦 <!-- -->30</span></span></div></a><a data-category-name="Command Line Interface" href="https://awesomeopensource.com/categories/command-line-interface"><div class="aos_category_explorer_category_container" data-category-name="Command Line Interface"><span data-category-name="Command Line Interface">Command Line Interface<span data-category-name="Command Line Interface" class="aos_project_count"> 📦 <!-- -->48</span></span></div></a><a data-category-name="Community" href="https://awesomeopensource.com/categories/community"><div class="aos_category_explorer_category_container" data-category-name="Community"><span data-category-name="Community">Community<span data-category-name="Community" class="aos_project_count"> 📦 <!-- -->81</span></span></div></a><a data-category-name="Companies" href="https://awesomeopensource.com/categories/companies"><div class="aos_category_explorer_category_container" data-category-name="Companies"><span data-category-name="Companies">Companies<span data-category-name="Companies" class="aos_project_count"> 📦 <!-- -->60</span></span></div></a><a data-category-name="Compilers" href="https://awesomeopensource.com/categories/compilers"><div class="aos_category_explorer_category_container" data-category-name="Compilers"><span data-category-name="Compilers">Compilers<span data-category-name="Compilers" class="aos_project_count"> 📦 <!-- -->60</span></span></div></a><a data-category-name="Computer Science" href="https://awesomeopensource.com/categories/computer-science"><div class="aos_category_explorer_category_container" data-category-name="Computer Science"><span data-category-name="Computer Science">Computer Science<span data-category-name="Computer Science" class="aos_project_count"> 📦 <!-- -->74</span></span></div></a><a data-category-name="Configuration Management" href="https://awesomeopensource.com/categories/configuration-management"><div class="aos_category_explorer_category_container" data-category-name="Configuration Management"><span data-category-name="Configuration Management">Configuration Management<span data-category-name="Configuration Management" class="aos_project_count"> 📦 <!-- -->39</span></span></div></a><a data-category-name="Content Management" href="https://awesomeopensource.com/categories/content-management"><div class="aos_category_explorer_category_container" data-category-name="Content Management"><span data-category-name="Content Management">Content Management<span data-category-name="Content Management" class="aos_project_count"> 📦 <!-- -->167</span></span></div></a><a data-category-name="Control Flow" href="https://awesomeopensource.com/categories/control-flow"><div class="aos_category_explorer_category_container" data-category-name="Control Flow"><span data-category-name="Control Flow">Control Flow<span data-category-name="Control Flow" class="aos_project_count"> 📦 <!-- -->197</span></span></div></a><a data-category-name="Data Formats" href="https://awesomeopensource.com/categories/data-formats"><div class="aos_category_explorer_category_container" data-category-name="Data Formats"><span data-category-name="Data Formats">Data Formats<span data-category-name="Data Formats" class="aos_project_count"> 📦 <!-- -->77</span></span></div></a><a data-category-name="Data Processing" href="https://awesomeopensource.com/categories/data-processing"><div class="aos_category_explorer_category_container" data-category-name="Data Processing"><span data-category-name="Data Processing">Data Processing<span data-category-name="Data Processing" class="aos_project_count"> 📦 <!-- -->266</span></span></div></a><a data-category-name="Data Storage" href="https://awesomeopensource.com/categories/data-storage"><div class="aos_category_explorer_category_container" data-category-name="Data Storage"><span data-category-name="Data Storage">Data Storage<span data-category-name="Data Storage" class="aos_project_count"> 📦 <!-- -->132</span></span></div></a><a data-category-name="Economics" href="https://awesomeopensource.com/categories/economics"><div class="aos_category_explorer_category_container" data-category-name="Economics"><span data-category-name="Economics">Economics<span data-category-name="Economics" class="aos_project_count"> 📦 <!-- -->60</span></span></div></a><a data-category-name="Frameworks" href="https://awesomeopensource.com/categories/frameworks"><div class="aos_category_explorer_category_container" data-category-name="Frameworks"><span data-category-name="Frameworks">Frameworks<span data-category-name="Frameworks" class="aos_project_count"> 📦 <!-- -->198</span></span></div></a><a data-category-name="Games" href="https://awesomeopensource.com/categories/games"><div class="aos_category_explorer_category_container" data-category-name="Games"><span data-category-name="Games">Games<span data-category-name="Games" class="aos_project_count"> 📦 <!-- -->122</span></span></div></a><a data-category-name="Graphics" href="https://awesomeopensource.com/categories/graphics"><div class="aos_category_explorer_category_container" data-category-name="Graphics"><span data-category-name="Graphics">Graphics<span data-category-name="Graphics" class="aos_project_count"> 📦 <!-- -->103</span></span></div></a><a data-category-name="Hardware" href="https://awesomeopensource.com/categories/hardware"><div class="aos_category_explorer_category_container" data-category-name="Hardware"><span data-category-name="Hardware">Hardware<span data-category-name="Hardware" class="aos_project_count"> 📦 <!-- -->148</span></span></div></a><a data-category-name="Integrated Development Environments" href="https://awesomeopensource.com/categories/integrated-development-environments"><div class="aos_category_explorer_category_container" data-category-name="Integrated Development Environments"><span data-category-name="Integrated Development Environments">Integrated Development Environments<span data-category-name="Integrated Development Environments" class="aos_project_count"> 📦 <!-- -->47</span></span></div></a><a data-category-name="Learning Resources" href="https://awesomeopensource.com/categories/learning-resources"><div class="aos_category_explorer_category_container" data-category-name="Learning Resources"><span data-category-name="Learning Resources">Learning Resources<span data-category-name="Learning Resources" class="aos_project_count"> 📦 <!-- -->147</span></span></div></a><a data-category-name="Legal" href="https://awesomeopensource.com/categories/legal"><div class="aos_category_explorer_category_container" data-category-name="Legal"><span data-category-name="Legal">Legal<span data-category-name="Legal" class="aos_project_count"> 📦 <!-- -->28</span></span></div></a><a data-category-name="Libraries" href="https://awesomeopensource.com/categories/libraries"><div class="aos_category_explorer_category_container" data-category-name="Libraries"><span data-category-name="Libraries">Libraries<span data-category-name="Libraries" class="aos_project_count"> 📦 <!-- -->119</span></span></div></a><a data-category-name="Lists Of Projects" href="https://awesomeopensource.com/categories/lists-of-projects"><div class="aos_category_explorer_category_container" data-category-name="Lists Of Projects"><span data-category-name="Lists Of Projects">Lists Of Projects<span data-category-name="Lists Of Projects" class="aos_project_count"> 📦 <!-- -->21</span></span></div></a><a data-category-name="Machine Learning" href="https://awesomeopensource.com/categories/machine-learning"><div class="aos_category_explorer_category_container" data-category-name="Machine Learning"><span data-category-name="Machine Learning">Machine Learning<span data-category-name="Machine Learning" class="aos_project_count"> 📦 <!-- -->336</span></span></div></a><a data-category-name="Mapping" href="https://awesomeopensource.com/categories/mapping"><div class="aos_category_explorer_category_container" data-category-name="Mapping"><span data-category-name="Mapping">Mapping<span data-category-name="Mapping" class="aos_project_count"> 📦 <!-- -->61</span></span></div></a><a data-category-name="Marketing" href="https://awesomeopensource.com/categories/marketing"><div class="aos_category_explorer_category_container" data-category-name="Marketing"><span data-category-name="Marketing">Marketing<span data-category-name="Marketing" class="aos_project_count"> 📦 <!-- -->15</span></span></div></a><a data-category-name="Mathematics" href="https://awesomeopensource.com/categories/mathematics"><div class="aos_category_explorer_category_container" data-category-name="Mathematics"><span data-category-name="Mathematics">Mathematics<span data-category-name="Mathematics" class="aos_project_count"> 📦 <!-- -->55</span></span></div></a><a data-category-name="Media" href="https://awesomeopensource.com/categories/media"><div class="aos_category_explorer_category_container" data-category-name="Media"><span data-category-name="Media">Media<span data-category-name="Media" class="aos_project_count"> 📦 <!-- -->228</span></span></div></a><a data-category-name="Messaging" href="https://awesomeopensource.com/categories/messaging"><div class="aos_category_explorer_category_container" data-category-name="Messaging"><span data-category-name="Messaging">Messaging<span data-category-name="Messaging" class="aos_project_count"> 📦 <!-- -->97</span></span></div></a><a data-category-name="Networking" href="https://awesomeopensource.com/categories/networking"><div class="aos_category_explorer_category_container" data-category-name="Networking"><span data-category-name="Networking">Networking<span data-category-name="Networking" class="aos_project_count"> 📦 <!-- -->304</span></span></div></a><a data-category-name="Operating Systems" href="https://awesomeopensource.com/categories/operating-systems"><div class="aos_category_explorer_category_container" data-category-name="Operating Systems"><span data-category-name="Operating Systems">Operating Systems<span data-category-name="Operating Systems" class="aos_project_count"> 📦 <!-- -->84</span></span></div></a><a data-category-name="Operations" href="https://awesomeopensource.com/categories/operations"><div class="aos_category_explorer_category_container" data-category-name="Operations"><span data-category-name="Operations">Operations<span data-category-name="Operations" class="aos_project_count"> 📦 <!-- -->120</span></span></div></a><a data-category-name="Package Managers" href="https://awesomeopensource.com/categories/package-managers"><div class="aos_category_explorer_category_container" data-category-name="Package Managers"><span data-category-name="Package Managers">Package Managers<span data-category-name="Package Managers" class="aos_project_count"> 📦 <!-- -->52</span></span></div></a><a data-category-name="Programming Languages" href="https://awesomeopensource.com/categories/programming-languages"><div class="aos_category_explorer_category_container" data-category-name="Programming Languages"><span data-category-name="Programming Languages">Programming Languages<span data-category-name="Programming Languages" class="aos_project_count"> 📦 <!-- -->229</span></span></div></a><a data-category-name="Runtime Environments" href="https://awesomeopensource.com/categories/runtime-environments"><div class="aos_category_explorer_category_container" data-category-name="Runtime Environments"><span data-category-name="Runtime Environments">Runtime Environments<span data-category-name="Runtime Environments" class="aos_project_count"> 📦 <!-- -->96</span></span></div></a><a data-category-name="Science" href="https://awesomeopensource.com/categories/science"><div class="aos_category_explorer_category_container" data-category-name="Science"><span data-category-name="Science">Science<span data-category-name="Science" class="aos_project_count"> 📦 <!-- -->42</span></span></div></a><a data-category-name="Security" href="https://awesomeopensource.com/categories/security"><div class="aos_category_explorer_category_container" data-category-name="Security"><span data-category-name="Security">Security<span data-category-name="Security" class="aos_project_count"> 📦 <!-- -->375</span></span></div></a><a data-category-name="Social Media" href="https://awesomeopensource.com/categories/social-media"><div class="aos_category_explorer_category_container" data-category-name="Social Media"><span data-category-name="Social Media">Social Media<span data-category-name="Social Media" class="aos_project_count"> 📦 <!-- -->26</span></span></div></a><a data-category-name="Software Architecture" href="https://awesomeopensource.com/categories/software-architecture"><div class="aos_category_explorer_category_container" data-category-name="Software Architecture"><span data-category-name="Software Architecture">Software Architecture<span data-category-name="Software Architecture" class="aos_project_count"> 📦 <!-- -->70</span></span></div></a><a data-category-name="Software Development" href="https://awesomeopensource.com/categories/software-development"><div class="aos_category_explorer_category_container" data-category-name="Software Development"><span data-category-name="Software Development">Software Development<span data-category-name="Software Development" class="aos_project_count"> 📦 <!-- -->68</span></span></div></a><a data-category-name="Software Performance" href="https://awesomeopensource.com/categories/software-performance"><div class="aos_category_explorer_category_container" data-category-name="Software Performance"><span data-category-name="Software Performance">Software Performance<span data-category-name="Software Performance" class="aos_project_count"> 📦 <!-- -->57</span></span></div></a><a data-category-name="Software Quality" href="https://awesomeopensource.com/categories/software-quality"><div class="aos_category_explorer_category_container" data-category-name="Software Quality"><span data-category-name="Software Quality">Software Quality<span data-category-name="Software Quality" class="aos_project_count"> 📦 <!-- -->127</span></span></div></a><a data-category-name="Text Editors" href="https://awesomeopensource.com/categories/text-editors"><div class="aos_category_explorer_category_container" data-category-name="Text Editors"><span data-category-name="Text Editors">Text Editors<span data-category-name="Text Editors" class="aos_project_count"> 📦 <!-- -->45</span></span></div></a><a data-category-name="Text Processing" href="https://awesomeopensource.com/categories/text-processing"><div class="aos_category_explorer_category_container" data-category-name="Text Processing"><span data-category-name="Text Processing">Text Processing<span data-category-name="Text Processing" class="aos_project_count"> 📦 <!-- -->131</span></span></div></a><a data-category-name="User Interface" href="https://awesomeopensource.com/categories/user-interface"><div class="aos_category_explorer_category_container" data-category-name="User Interface"><span data-category-name="User Interface">User Interface<span data-category-name="User Interface" class="aos_project_count"> 📦 <!-- -->310</span></span></div></a><a data-category-name="User Interface Components" href="https://awesomeopensource.com/categories/user-interface-components"><div class="aos_category_explorer_category_container" data-category-name="User Interface Components"><span data-category-name="User Interface Components">User Interface Components<span data-category-name="User Interface Components" class="aos_project_count"> 📦 <!-- -->465</span></span></div></a><a data-category-name="Version Control" href="https://awesomeopensource.com/categories/version-control"><div class="aos_category_explorer_category_container" data-category-name="Version Control"><span data-category-name="Version Control">Version Control<span data-category-name="Version Control" class="aos_project_count"> 📦 <!-- -->29</span></span></div></a><a data-category-name="Virtualization" href="https://awesomeopensource.com/categories/virtualization"><div class="aos_category_explorer_category_container" data-category-name="Virtualization"><span data-category-name="Virtualization">Virtualization<span data-category-name="Virtualization" class="aos_project_count"> 📦 <!-- -->68</span></span></div></a><a data-category-name="Web Browsers" href="https://awesomeopensource.com/categories/web-browsers"><div class="aos_category_explorer_category_container" data-category-name="Web Browsers"><span data-category-name="Web Browsers">Web Browsers<span data-category-name="Web Browsers" class="aos_project_count"> 📦 <!-- -->38</span></span></div></a><a data-category-name="Web Servers" href="https://awesomeopensource.com/categories/web-servers"><div class="aos_category_explorer_category_container" data-category-name="Web Servers"><span data-category-name="Web Servers">Web Servers<span data-category-name="Web Servers" class="aos_project_count"> 📦 <!-- -->25</span></span></div></a><a data-category-name="Web User Interface" href="https://awesomeopensource.com/categories/web-user-interface"><div class="aos_category_explorer_category_container" data-category-name="Web User Interface"><span data-category-name="Web User Interface">Web User Interface<span data-category-name="Web User Interface" class="aos_project_count"> 📦 <!-- -->194</span></span></div></a></div></div></div><div class="aos_project_metadata_trademark_notice">&quot;<!-- -->Emojipacks<!-- -->&quot; and other potentially trademarked words, copyrighted images and copyrighted readme contents likely belong to the legal entity who owns the &quot;<a href="https://github.com/lambtron" target="_blank" rel="nofollow">Lambtron</a>&quot; organization.  Awesome Open Source is not affiliated with the legal entity who owns the &quot;<a href="https://github.com/lambtron" target="_blank" rel="nofollow">Lambtron</a>&quot; organization.</div></div></div><div class="aos_fixed_footer_container"><br/><span>All non readme contents or Github based topics or project metadata copyright Awesome Open Source <!-- -->2018-2021</span></div></div></div>
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/json" class="js-react-on-rails-component" data-component-name="Root" data-dom-id="Root-react-component-2b7730c5-981d-41ac-a7a2-8c417852d67d">{"topics":[{"name":"javascript","count":1545173},{"name":"python","count":1130702},{"name":"java","count":707095},{"name":"html","count":428001},{"name":"php","count":403489},{"name":"c-plus-plus","count":367861},{"name":"ruby","count":311958},{"name":"c","count":274829},{"name":"c-sharp","count":273839},{"name":"typescript","count":249122}],"projectTopics":[{"count":428002,"topics":[{"id":57,"name":"html"}],"is_project_tag":1,"filtered_topics":null,"filtered_count":null},{"count":2931,"topics":[{"id":9657,"name":"slack"}],"is_project_tag":1,"filtered_topics":null,"filtered_count":null},{"count":1332,"topics":[{"id":9469,"name":"emoji"}],"is_project_tag":1,"filtered_topics":null,"filtered_count":null},{"count":249,"topics":[{"id":29929,"name":"emojis"}],"is_project_tag":1,"filtered_topics":null,"filtered_count":null}],"relatedTopics":[{"count":119,"topics":[{"id":9469,"name":"emoji"},{"id":29929,"name":"emojis"}],"filtered_count":null,"filtered_topics":null},{"count":74,"topics":[{"id":9657,"name":"slack"},{"id":9469,"name":"emoji"}],"filtered_count":null,"filtered_topics":null},{"count":65,"topics":[{"id":57,"name":"html"},{"id":9469,"name":"emoji"}],"filtered_count":null,"filtered_topics":null},{"count":47,"topics":[{"id":57,"name":"html"},{"id":9657,"name":"slack"}],"filtered_count":null,"filtered_topics":null},{"count":15,"topics":[{"id":57,"name":"html"},{"id":29929,"name":"emojis"}],"filtered_count":null,"filtered_topics":null},{"count":14,"topics":[{"id":9657,"name":"slack"},{"id":29929,"name":"emojis"}],"filtered_count":null,"filtered_topics":null},{"count":8,"topics":[{"id":9657,"name":"slack"},{"id":9469,"name":"emoji"},{"id":29929,"name":"emojis"}],"filtered_count":null,"filtered_topics":null},{"count":7,"topics":[{"id":57,"name":"html"},{"id":9469,"name":"emoji"},{"id":29929,"name":"emojis"}],"filtered_count":null,"filtered_topics":null},{"count":3,"topics":[{"id":57,"name":"html"},{"id":9657,"name":"slack"},{"id":9469,"name":"emoji"}],"filtered_count":null,"filtered_topics":null}],"selectedTopics":[],"currentUrl":"https://awesomeopensource.com/project/lambtron/emojipacks","projects":[],"project":{"id":6584257,"created_at":"2020-01-31T18:32:15.642Z","updated_at":"2020-05-07T09:05:08.992Z","project_id":39672497,"name":"emojipacks","owner_login":"lambtron","description":"CLI to bulk upload emojis to your Slack","pushed_at":"2019-11-26T16:51:05.000Z","stargazers_count":1243,"open_issues_count":28,"has_downloads":true,"archived":false,"license_key":"mit","homepage":"https://emojipacks.com","private":false,"project_created_at":"2015-07-25T04:27:20.000Z","project_updated_at":"2020-04-23T05:28:04.000Z","language":"HTML","added_language_topic":true,"has_readme":true,"dmca_takedown":false,"topics_ids":[9469,29929,9657,57],"obsolete":false,"markdown_readme":"\u003ch1\u003e\n\u003ca id=\"user-content-emojipacks\" class=\"anchor\" aria-hidden=\"true\" name=\"emojipacks\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eemojipacks\u003c/h1\u003e\n\u003cp\u003e\u003ca href=\"https://travis-ci.org/lambtron/emojipacks\" rel=\"nofollow\"\u003e\u003cimg src=\"https://travis-ci.org/lambtron/emojipacks.svg?branch=master\" alt=\"Build Status\"\u003e\u003c/a\u003e\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eCLI to bulk upload emojis to your Slack!\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-install\" class=\"anchor\" aria-hidden=\"true\" name=\"install\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eInstall\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eNote you must have \u003ccode\u003enode\u003c/code\u003e and \u003ccode\u003enpm\u003c/code\u003e installed. If you don't, go to \u003ca href=\"https://www.nodejs.org\" rel=\"nofollow\"\u003enodejs.org\u003c/a\u003e and follow the install instructions there.\u003c/em\u003e\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003e$ npm install -g emojipacks\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eor\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003e$ git clone git@github.com:lambtron/emojipacks.git\n$ cd emojipacks\n$ make\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-usage\" class=\"anchor\" aria-hidden=\"true\" name=\"usage\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eUsage\u003c/h2\u003e\n\u003cp\u003eThere is only one command:\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003e$ emojipacks\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIt'll ask you a few questions:\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003eSlack subdomain: 20percentclub\nEmail address login: andyjiang@gmail.com\nPassword: *********\n2FA Code: 123456  #  if 2FA is enabled\nPath or URL of Emoji yaml file: ./packs/futurama.yaml\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThen, let it work its magic:\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003eStarting import\nGot tokens\nLogged in\nUpload crumb is s-1437797544-90b75206a7-☃\nGetting emoji page\nUploading bender with http://i.imgur.com/7zYM751.png\nUploading amywong with http://i.imgur.com/DgKkcCi.png\n .\n .\n .\nUploading hypnotoad with http://i.imgur.com/o7tyjxN.gif\nUploaded emojis\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNote that the emoji pack to upload can be a \u003cstrong\u003epath\u003c/strong\u003e to a yaml file on your machine or a \u003cstrong\u003eURL\u003c/strong\u003e, like \u003ca href=\"http://www.emojipacks.com/packs/food.yaml\" rel=\"nofollow\"\u003ehttp://www.emojipacks.com/packs/food.yaml\u003c/a\u003e.\u003c/p\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-optionally-pass-command-line-parameters\" class=\"anchor\" aria-hidden=\"true\" name=\"optionally-pass-command-line-parameters\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eOptionally Pass Command Line Parameters\u003c/h2\u003e\n\u003cp\u003eThis will allow for easier batch uploading of multiple yaml files\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003e$ emojipacks -s \u0026lt;subdomain\u0026gt; -e \u0026lt;email\u0026gt; -p \u0026lt;password\u0026gt; -y \u0026lt;yaml_file\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-run-batch-upload-script\" class=\"anchor\" aria-hidden=\"true\" name=\"run-batch-upload-script\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eRun Batch Upload script\u003c/h2\u003e\n\u003cp\u003eA file named batchUploadExample.sh is provided for your reference. Edit this file change the subdomain, email, and password parameters to your own and save it as batchUpload.sh or something similar.\u003c/p\u003e\n\u003cp\u003eThis script will aid in the process of batch uploading.\u003c/p\u003e\n\u003cp\u003eIt optionally takes an argument for the directory path that contains your yaml files. If this is not provided './packs' will be used by default.\u003c/p\u003e\n\u003cpre lang=\"bash\"\u003e\u003ccode\u003e$ ./batchUpload.sh [path_to_yaml_files]\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-emoji-yaml-file\" class=\"anchor\" aria-hidden=\"true\" name=\"emoji-yaml-file\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eEmoji Yaml File\u003c/h2\u003e\n\u003cp\u003eAlso note that the yaml file must be indented properly and formatted as such:\u003c/p\u003e\n\u003cpre lang=\"yaml\"\u003e\u003ccode\u003etitle: food\nemojis:\n  - name: apple\n    src: http://i.imgur.com/Rw0Vlda.png\n  - name: applepie\n    src: http://i.imgur.com/g4RU1fM.png\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e..with the \u003ccode\u003esrc\u003c/code\u003e pointing to an image file. According to Slack:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eSquare images work best\u003c/li\u003e\n\u003cli\u003eImage can't be larger than 128px in width or height\u003c/li\u003e\n\u003cli\u003eImage must be smaller than 64K in file size\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e\n\u003ca id=\"user-content-emoji-aliases\" class=\"anchor\" aria-hidden=\"true\" name=\"emoji-aliases\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eEmoji Aliases\u003c/h3\u003e\n\u003cp\u003eIt is possible to give multiple names to a single emoji using yaml such as:\u003c/p\u003e\n\u003cpre lang=\"yaml\"\u003e\u003ccode\u003etitle: octicons\nemojis:\n  - name: pr\n    aliases:\n      - pullrequest\n      - mergerequest\n    src: https://i.imgur.com/rhwNxfc.png\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-emoji-packs\" class=\"anchor\" aria-hidden=\"true\" name=\"emoji-packs\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eEmoji packs\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/animals.yaml\" rel=\"nofollow\"\u003eanimals\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/clippy.yaml\" rel=\"nofollow\"\u003eclippy\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/fika.yaml\" rel=\"nofollow\"\u003efika\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/frontend.yaml\" rel=\"nofollow\"\u003efrontend\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/harrypotterhouses.yaml\" rel=\"nofollow\"\u003eharrypotter\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/mario-8bit.yaml\" rel=\"nofollow\"\u003emario\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/occupy.yaml\" rel=\"nofollow\"\u003eoccupy\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/officespace.yaml\" rel=\"nofollow\"\u003eofficespace\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/omnom.yaml\" rel=\"nofollow\"\u003eomnom\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/futurama.yaml\" rel=\"nofollow\"\u003efuturama\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/food.yaml\" rel=\"nofollow\"\u003efood\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/skype.yaml\" rel=\"nofollow\"\u003eskype\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/starwars.yaml\" rel=\"nofollow\"\u003estarwars\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/startups.yaml\" rel=\"nofollow\"\u003estartups\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/businessfish.yaml\" rel=\"nofollow\"\u003ebusinessfish\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/hipchat.yaml\" rel=\"nofollow\"\u003ehipchat\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/twitch.yaml\" rel=\"nofollow\"\u003etwitch\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/parrotparty.yaml\" rel=\"nofollow\"\u003eparrotparty\u003c/a\u003e (\u003ca href=\"http://cultofthepartyparrot.com/\" rel=\"nofollow\"\u003eParrot\u003c/a\u003e \u003ca href=\"http://cultofthepartyparrot.com/paint/\" rel=\"nofollow\"\u003ePaint\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/finland.yaml\" rel=\"nofollow\"\u003eFinland\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/pokemongo.yaml\" rel=\"nofollow\"\u003epokemongo: items\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon.yaml\" rel=\"nofollow\"\u003ePokémon Go: Pokémon\u003c/a\u003e (\u003ca href=\"https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon-prefix.yaml\" rel=\"nofollow\"\u003ePrefixed \u003ccode\u003epokemon-*\u003c/code\u003e\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/politipack.yaml\" rel=\"nofollow\"\u003epolitipack\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/nekoatsume.yaml\" rel=\"nofollow\"\u003enekoatsume\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/octicons.yaml\" rel=\"nofollow\"\u003eocticons\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/jaylynch/pokemoji/master/pokemon-by-name.yaml\" rel=\"nofollow\"\u003epokemon\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/devicon.yaml\" rel=\"nofollow\"\u003edevicon\u003c/a\u003e (\u003ca href=\"http://devicon.fr/\" rel=\"nofollow\"\u003eDevicon\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"https://raw.githubusercontent.com/snipe/hamsterdance-emojipack/master/hamsterdance.yaml\" rel=\"nofollow\"\u003ehamsterdance\u003c/a\u003e (\u003ca href=\"https://awesomeopensource.com/project/snipe/hamsterdance-emojipack\"\u003esnipe/emojipacks\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/avengers.yaml\" rel=\"nofollow\"\u003eavengers\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/shiba.yaml\" rel=\"nofollow\"\u003eShiba Stickers\u003c/a\u003e (from Messenger)\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/niksudan/gamedevmoji/master/gamedevicons.yaml\" rel=\"nofollow\"\u003egamedevmoji\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/Surgo/aws_emojipacks/master/noprefix-emojipacks.yml\" rel=\"nofollow\"\u003eAWS simple icons\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e\n\u003ca id=\"user-content-emoji-packs-from-slackmojiscom\" class=\"anchor\" aria-hidden=\"true\" name=\"emoji-packs-from-slackmojiscom\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eEmoji packs from \u003ca href=\"http://www.slackmojis.com\" rel=\"nofollow\"\u003eslackmojis.com\u003c/a\u003e\n\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-uncategorized.yaml\" rel=\"nofollow\"\u003eUncategorized\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-facebook-reaction.yaml\" rel=\"nofollow\"\u003eFacebook Reaction\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-logo.yaml\" rel=\"nofollow\"\u003eLogo\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-meme.yaml\" rel=\"nofollow\"\u003eMeme\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-mlb.yaml\" rel=\"nofollow\"\u003eMLB\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nba.yaml\" rel=\"nofollow\"\u003eNBA\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nfl.yaml\" rel=\"nofollow\"\u003eNFL\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nhl.yaml\" rel=\"nofollow\"\u003eNHL\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-nyc-subway.yaml\" rel=\"nofollow\"\u003eNYC Subway\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-party-parrot.yaml\" rel=\"nofollow\"\u003eParty Parrot\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-pokemon.yaml\" rel=\"nofollow\"\u003ePokemon\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-retro-game.yaml\" rel=\"nofollow\"\u003eRetro Game\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-scrabble-letters.yaml\" rel=\"nofollow\"\u003eScrabble Letters\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-skype.yaml\" rel=\"nofollow\"\u003eSkype\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-star-wars.yaml\" rel=\"nofollow\"\u003eStar Wars\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-turntable.fm.yaml\" rel=\"nofollow\"\u003eTurntable.fm\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis-yoyo.yaml\" rel=\"nofollow\"\u003eYoyo\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cimg src=\"https://media1.giphy.com/media/68H7QjnqFOn2E/100.gif\" alt=\"\"\u003e\u003c/p\u003e\n\u003cp\u003eWant to contribute? \u003ca href=\"https://20p.typeform.com/to/xOFDyq\" rel=\"nofollow\"\u003eSuggest an emoji pack\u003c/a\u003e!\u003c/p\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-troubleshooting\" class=\"anchor\" aria-hidden=\"true\" name=\"troubleshooting\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eTroubleshooting\u003c/h2\u003e\n\u003cp\u003eThis script will essentially log into your Slack and then submit a \u003ccode\u003ePOST\u003c/code\u003e request on the emoji upload form page. If you are seeing errors, make sure that:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cstrong\u003eyou have Slack privileges to add custom emojis\u003c/strong\u003e: otherwise, the script won't be able to get to the emoji upload form\u003c/li\u003e\n\u003cli\u003e\n\u003cstrong\u003eyour credentials are correct\u003c/strong\u003e: if you have done all of the following correctly try running the command \u003cstrong\u003eemojipacks -d\u003c/strong\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cem\u003eStill having issues? Create an issue \u003ca href=\"https://github.com/lambtron/emojipacks/issues/new\" rel=\"nofollow\"\u003ehere\u003c/a\u003e.\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eEnjoyed this project? Check out my \u003ca href=\"http://blog.andyjiang.com\" rel=\"nofollow\"\u003eblog\u003c/a\u003e for more\u003c/em\u003e.\u003c/p\u003e\n\u003ch2\u003e\n\u003ca id=\"user-content-license-mit\" class=\"anchor\" aria-hidden=\"true\" name=\"license-mit\"\u003e\u003csvg class=\"octicon octicon-link\" viewbox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003eLicense (MIT)\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003eWWWWWW||WWWWWW\n W W W||W W W\n      ||\n    ( OO )__________\n     /  |           \\\n    /o o|    MIT     \\\n    \\___/||_||__||_|| *\n         || ||  || ||\n        _||_|| _||_||\n       (__|__|(__|__|\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003ePermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\u003c/p\u003e\n\u003cp\u003eThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\u003c/p\u003e\n\u003cp\u003eTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\u003c/p\u003e\n"},"categories":[{"name":"Advertising","topicsCount":9},{"name":"Application Programming Interfaces","topicsCount":120},{"name":"Applications","topicsCount":181},{"name":"Artificial Intelligence","topicsCount":72},{"name":"Blockchain","topicsCount":70},{"name":"Build Tools","topicsCount":111},{"name":"Cloud Computing","topicsCount":79},{"name":"Code Quality","topicsCount":28},{"name":"Collaboration","topicsCount":30},{"name":"Command Line Interface","topicsCount":48},{"name":"Community","topicsCount":81},{"name":"Companies","topicsCount":60},{"name":"Compilers","topicsCount":60},{"name":"Computer Science","topicsCount":74},{"name":"Configuration Management","topicsCount":39},{"name":"Content Management","topicsCount":167},{"name":"Control Flow","topicsCount":197},{"name":"Data Formats","topicsCount":77},{"name":"Data Processing","topicsCount":266},{"name":"Data Storage","topicsCount":132},{"name":"Economics","topicsCount":60},{"name":"Frameworks","topicsCount":198},{"name":"Games","topicsCount":122},{"name":"Graphics","topicsCount":103},{"name":"Hardware","topicsCount":148},{"name":"Integrated Development Environments","topicsCount":47},{"name":"Learning Resources","topicsCount":147},{"name":"Legal","topicsCount":28},{"name":"Libraries","topicsCount":119},{"name":"Lists Of Projects","topicsCount":21},{"name":"Machine Learning","topicsCount":336},{"name":"Mapping","topicsCount":61},{"name":"Marketing","topicsCount":15},{"name":"Mathematics","topicsCount":55},{"name":"Media","topicsCount":228},{"name":"Messaging","topicsCount":97},{"name":"Networking","topicsCount":304},{"name":"Operating Systems","topicsCount":84},{"name":"Operations","topicsCount":120},{"name":"Package Managers","topicsCount":52},{"name":"Programming Languages","topicsCount":229},{"name":"Runtime Environments","topicsCount":96},{"name":"Science","topicsCount":42},{"name":"Security","topicsCount":375},{"name":"Social Media","topicsCount":26},{"name":"Software Architecture","topicsCount":70},{"name":"Software Development","topicsCount":68},{"name":"Software Performance","topicsCount":57},{"name":"Software Quality","topicsCount":127},{"name":"Text Editors","topicsCount":45},{"name":"Text Processing","topicsCount":131},{"name":"User Interface","topicsCount":310},{"name":"User Interface Components","topicsCount":465},{"name":"Version Control","topicsCount":29},{"name":"Virtualization","topicsCount":68},{"name":"Web Browsers","topicsCount":38},{"name":"Web Servers","topicsCount":25},{"name":"Web User Interface","topicsCount":194},{"name":"All Projects","topicsCount":0}],"advertisement":{"variation":"project","title":"Become A Software Engineer At Top Companies","description":"Identify your strengths with a free online coding quiz, and skip resume and recruiter screens at multiple companies at once.  It's free, confidential, includes a free flight and hotel, along with help to study to pass interviews and negotiate a high salary!","url":"https://triplebyte.com/a/PGNifkM/pt2"},"nonCommercial":false,"nonDerivative":false,"obsolete":false}</script>
+      
+
+
+
+    <!-- load synchronously before app bundle so adsbygoogle is always defined, google's new ad code doesn't seem to like this, at least for the initial review  -->
+    <!-- try loading programatically and async with a callback to push the ads and see if it helps page load speed -->
+    <!--script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
+    <script src="/packs/root-bundle-8b57f9a4c020c47f4ff8.js"></script>
+  <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6999618918962bef',m:'V0ofEiHPWk7Vxu2K7H0y.E5iBn4XclUqtiSUA_ObozY-1633465545-0-AVxi2kS5eSz3+hPrpms2hcDXg13nh1pVvkhFvoDaR9IC72bmEvW3j7E2oT5ZQW2g8SseaizYbJ69TBIme34ynEYp0F0by2YzdUde4mtd0ha88JxD7+W9H0jY+ES3v6DAxzJ7wu2YlPdQ8bIxk/mdHOA=',s:[0xfad9961c9f,0x207c2af995],}})();</script></body>
+</html>
+
