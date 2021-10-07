@@ -22,5 +22,7 @@ for i in `cat ../emojipacks.html | egrep -o '(https://raw).*(yaml)'| grep -v hre
   done
 
 #All emojis are downloaded to current directory
-pipenv run python upload.py emojjidump/*.jpeg;pipenv run python upload.py emojidump/*.jpg;pipenv run python upload.py emojidump/*.gif;pipenv run python upload.py emojidump/*.png
+
+#The following line is an example of how to upload 
+#pipenv run python upload.py emojjidump/*.jpeg;pipenv run python upload.py emojidump/*.jpg;pipenv run python upload.py emojidump/*.gif;pipenv run python upload.py emojidump/*.png
 cd ..
