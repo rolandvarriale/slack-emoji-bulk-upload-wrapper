@@ -8,7 +8,7 @@ https://github.com/smashwilson/slack-emojinator
 Step 1: clone the emojinator  
   git clone https://github.com/smashwilson/slack-emojinator
 
-Step 2: Install the eomjinator
+Step 2: Install the emojinator
   git clone https://github.com/smashwilson/slack-emojinator.git
   cd slack-emojinator
   pipenv install
